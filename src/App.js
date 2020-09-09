@@ -1,5 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import Menu from './components/Menu/Menu';
+import Header from './components/Header';
 import './App.css';
 import routers from './routes';
 // import Goal from './components/Goal/Goal';
@@ -8,7 +10,8 @@ import routers from './routes';
 function App() {
   return (
     <div className="App">
-      {/* <Goal/> */}
+      <Header/>
+      {/* <Menu/>  */}
       {routers}
     </div>
   );

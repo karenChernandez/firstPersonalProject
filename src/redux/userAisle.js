@@ -11,12 +11,25 @@ const initialState={
 const REGISTER_USER = 'REGISTER_USER';
 const LOGIN_USER = 'LOGIN_USER';
 const LOGOUT_USER = 'LOGOUT_USER';
+const GET_USER= 'GET_USER';
 // *****
 const GOAL_POST = 'GOAL_POST';
+
+//*****
+const TODO_POST = 'TODO_POST';
 
 
 
 //ACTION CREATOR
+export function getUser(){
+    return{
+        type: GET_USER,
+        payload: axios.get('/user').then((res)=>{
+            return res.data
+            })
+    }
+
+}
 
 export function registerUser(username, name, password, profile_pic, history){
     console.log('username, name, password, profile_user', username, name, password, profile_pic, history)
@@ -41,7 +54,8 @@ export function loginUser(username, password, history){
             username,
             password
         }).then((res) => {
-            history.push('/Menu')
+            history.push('/TodoList')
+            console.log("RES>DATA", res.data)
            return res.data
         })
     }
@@ -49,7 +63,7 @@ export function loginUser(username, password, history){
 
 
 export function logOut(history){
-    history.push('/')
+    // history.push('/')
     
     return{
         type: LOGOUT_USER,
@@ -57,10 +71,23 @@ export function logOut(history){
         
     }
 }
+// *******************************TO_DO
+// export function createTodo(user_id, todo){
+//     console.log('TODO?', user_id, todo)
+//     return{
+//         type: TODO_POST,
+//         payload: axios.post('/todo/post',{
+//             user_id,
+//             todo
+//         }).then((res)=>{
+//             return res.data
+//         })
+//     }
+// }
 
 
 // **************************************GOALS!!
-export function goalPost(userId, mainGoal, goal1, goal2, goal3, actionPlan) {
+export function goalPost(userId, mainGoal, goal1, goal2, goal3, actionPlan, history) {
     console.log('mainGoal, goal1, goal2, goal3!!', userId, mainGoal, goal1, goal2, goal3, actionPlan)
     return {
         type: GOAL_POST,
@@ -73,6 +100,7 @@ export function goalPost(userId, mainGoal, goal1, goal2, goal3, actionPlan) {
             actionPlan
         }).then(res => {
             console.log("goalPost -> res.data[0]", res.data)
+            history.push('/Calendar')
             return res.data[0]
 
 
@@ -81,6 +109,9 @@ export function goalPost(userId, mainGoal, goal1, goal2, goal3, actionPlan) {
         
     }
 }
+
+
+
 
 
 
@@ -94,9 +125,12 @@ export default function(state=initialState, action){
         case `${LOGOUT_USER}_FULFILLED`:
             return {...state, ...action.payload}   
         case `${GOAL_POST}_FULFILLED`:
-            return {...state, user: action.payload} 
+            return {...state, user: action.payload}
+        case `${GET_USER}_FULFILLED`:
+            return {...state, user:action.payload}
     
             default:
-                return initialState
+                console.log("DEFAULT CASE", action)
+                return state
         }
 }

@@ -3,5 +3,7 @@
 
 SELECT *
 FROM users
-    LEFT JOIN goals ON (goals.author_id = users.user_id )
+LEFT JOIN goals ON (goals.author_id = users.user_id )
+
+     
 WHERE  users.username = $1;

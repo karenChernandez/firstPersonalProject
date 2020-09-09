@@ -4,7 +4,7 @@ VALUES
     ($1, $2, $3, $4, $5, $6);
 
 SELECT *
-FROM goals
-    JOIN users ON (goals.author_id = users.user_id )
+FROM users
+    left JOIN goals ON (goals.author_id = users.user_id )
 WHERE  goals.author_id = $1;
 

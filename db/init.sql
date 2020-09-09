@@ -16,3 +16,11 @@ CREATE TABLE IF NOT EXISTS goals
     action_plan TEXT,
     author_id INT REFERENCES users(user_id)
 );
+
+CREATE TABLE IF NOT EXISTS todo
+(
+    todo_id SERIAL PRIMARY KEY,
+    todo TEXT,
+    date STRING,
+    author_id INT REFERENCES users(user_id)
+);

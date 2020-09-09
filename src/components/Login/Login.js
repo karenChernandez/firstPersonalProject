@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {loginUser} from './../../redux/userAisle';
 import {connect} from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 class Login extends Component{
@@ -19,6 +20,7 @@ handleChange(event){
 
     render(){
         console.log('what is on Login', this.state)
+        console.log('LOGIN PROPS', this.props)
         const {username, password}= this.state;
     return (<div>
         <h1>Username:</h1>
@@ -27,7 +29,9 @@ handleChange(event){
         <input onChange={(event) => this.handleChange(event)} value={password} name='password'/>
         <div>
             <button onClick={() => this.props.loginUser(username, password, this.props.history)} >Submit</button>
-
+            <Link to='/Register'>
+            <button>Register</button>
+            </Link>
         </div>        
 
         

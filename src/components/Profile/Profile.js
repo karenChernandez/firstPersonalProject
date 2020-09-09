@@ -1,24 +1,38 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {goalPost} from './../../redux/userAisle';
-import { Link } from 'react-router-dom';
+import {getTodos} from '../../redux/todoAisle';
+// import { Link } from 'react-router-dom';
+
 
 
 class Profile extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.state={
-            mainGoal: '',
-            goal1: '',
-            goal2: '',
-            goal3: '',
-            actionPlan: ''
+            mainGoal: this.props.userAisle.user.main_goal || '',
+            goal1: this.props.userAisle.user.micro_goal1 || '',
+            goal2: this.props.userAisle.user.micro_goal2 || '',
+            goal3: this.props.userAisle.user.micro_goal3 || '',
+            actionPlan: this.props.userAisle.user.action_plan || ''
         }
     }
+    // componentDidMount(){
+    // if (this.props.userAisle.user.user_id) {
+    //     this.props.goalPost(this.props.userAisle.user.user_id)
+    // }
+    // }
+    // componentDidUpdate(previousProps) {
+    //     console.log('PROPS.DATA', previousProps.userAisle.user.user_id, this.props.userAisle.user.user_id)
+    //     //  Race Condition between Menu CDM & this component's CDM
+    //     if (previousProps.userAisle.user.user_id !== this.props.userAisle.user.user_id) {
+    //         this.props.goalPost(this.props.userAisle.user.user_id)
+           
+    //     }
+    // }
 
-
-
+   
     changeInput=(event)=>{
         this.setState({
             [event.target.name]:event.target.value
@@ -30,13 +44,17 @@ class Profile extends Component{
     render(){
         const { mainGoal, goal1, goal2, goal3, actionPlan}= this.state
         console.log('What is Profile STATE?', this.state)
-        console.log('PROPS??', this.props)
+        console.log('Profile PROPS??', this.props)
 
     return (<div>
-        <nav>
+        <div>
+            <h1>Hello {this.props.userAisle.user.name} !</h1>
+            {/* <img src={this.props.userAisle.user.profile_pic}/> */}
+        </div>
+        {/* <nav>
             <Link to='/Menu'>Menu</Link>
             <Link to='/'>Logout</Link>
-        </nav>
+        </nav> */}
         <div>
             <h1>What do you want to accomplish in this Bootcamp?(Main Goal)</h1>
             <input onChange={(event) => this.changeInput(event)} value={mainGoal} name='mainGoal'></input>
@@ -68,7 +86,7 @@ class Profile extends Component{
         </div>
         <div>
             
-            <button onClick={() => this.props.goalPost(this.props.userAisle.user.userId, mainGoal, goal1, goal2, goal3, actionPlan)}>Submit</button>
+            <button onClick={() => this.props.goalPost(this.props.userAisle.user.user_id, mainGoal, goal1, goal2, goal3, actionPlan, this.props.history)}>Submit</button>
             <button onClick={(event) => this.handleEdit(event)}>Edit</button>
         </div>
     </div>)
@@ -77,4 +95,4 @@ class Profile extends Component{
 
 
 const mapStateToProps = state => state;
-export default connect(mapStateToProps, {goalPost})(Profile);
+export default connect(mapStateToProps, { goalPost, getTodos})(Profile);

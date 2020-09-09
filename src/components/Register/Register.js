@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {registerUser} from './../../redux/userAisle';
+import { Link } from 'react-router-dom';
 
 
 
@@ -39,6 +40,8 @@ render(){
             <h1>Picture:</h1>
             <input onChange={(e) => this.handleInput(e)} name='profile_pic' value={profile_pic}/>
             <button onClick={() => this.props.registerUser(username, name, password, profile_pic, this.props.history)}>Submit</button>
+            <Link to='/'><button>LogIn</button></Link>
+       
         </form>
         
     </div>)

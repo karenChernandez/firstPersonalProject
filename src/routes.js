@@ -1,8 +1,8 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import Profile from './components/Profile/Profile';
-import Calendar from './components/Calendar/Calendar';
-import Todo_list from './components/Study_chart/Study_chart';
+import Calendar  from './components/Calendar /Calendar ';
+import TodoList from './components/TodoList/TodoList';
 import Study_chart from './components/Study_chart/Study_chart';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
@@ -17,8 +17,8 @@ export default(
         <Route path='/Profile' component={Profile}/>
         <Route path='/Register' component={Register}/>
         <Route path='/Study_chart' component={Study_chart}/>
-        <Route path='/Todo_list' component={Todo_list}/>
-        <Route path='/Calendar' component={Calendar}/>
-        <Route path='/Notes' component={Notes}/>
+        <Route path='/TodoList' component={TodoList}/>
+        <Route path='/Calendar' component={Calendar }/>
+        {/* <Route path='/Notes' component={Notes}/> */}
     </Switch>
 )

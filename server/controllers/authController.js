@@ -16,16 +16,16 @@ module.exports={
         const newUser = await db.create_user([username, name, hash, profile_pic])
 
         req.session.user={
-            userId: newUser[0].user_id,
+            user_id: newUser[0].user_id,
             username: newUser[0].username,
             name: newUser[0].name,
             profile_pic: newUser[0].profile_pic,
             // goals: {
-                mainGoal: newUser[0].main_goal,
+                main_goal: newUser[0].main_goal,
                 micro_goal1: newUser[0].micro_goal1,
-                microGoal2: newUser[0].micro_goal2,
-                microGoal3: newUser[0].micro_goal3,
-                actionPlan: newUser[0].action_plan
+                micro_goal2: newUser[0].micro_goal2,
+                micro_goal3: newUser[0].micro_goal3,
+                action_plan: newUser[0].action_plan
             // }
                 }
                 res.status(200).send(req.session.user)
@@ -44,16 +44,16 @@ module.exports={
                 const authenticated = bcrypt.compareSync(password, user[0].password);
                 if(authenticated){
                     req.session.user ={
-                        userId: user[0].user_id,
+                        user_id: user[0].user_id,
                         username: user[0].username,
                         name: user[0].name,
                         profile_pic: user[0].profile_pic,
                         // goals:{
-                            mainGoal: user[0].main_goal,
+                            main_goal: user[0].main_goal,
                             micro_goal1: user[0].micro_goal1,
-                            microGoal2: user[0].micro_goal2,
-                            microGoal3: user[0].micro_goal3,
-                            actionPlan: user[0].action_plan
+                            micro_goal2: user[0].micro_goal2,
+                            micro_goal3: user[0].micro_goal3,
+                            action_plan: user[0].action_plan
                         // }
                     }
                     res.status(200).send(req.session.user)
@@ -66,6 +66,9 @@ module.exports={
         logout:(req, res)=>{
             req.session.destroy();
             res.status(200);
+        },
+        getUser:(req,res)=>{
+            res.send(req.session.user)
         }
 }
     

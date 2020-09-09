@@ -7,8 +7,9 @@ const app = express();
 
 const { CONNECTION_STRING, SESSION_SECRET, SERVER_PORT}= process.env;
 const authCtrl= require('./controllers/authController');
-// const authController = require('./controllers/authController');
-const goalCtrl = require('./controllers/goalCtrl');
+const goalCtrl = require('./controllers/goalController');
+const todoCtrl = require('./controllers/todoController');
+
 
 app.use(express.json());
 app.use(session({
@@ -32,12 +33,20 @@ massive({
 
 
 
-
+//server lisenters 
 
 app.post('/auth/register', authCtrl.register)
 app.post('/auth/login', authCtrl.login)
 app.post('/profileGoal/post', goalCtrl.post)
 //app.put('/profileGoal/edit', goalCtrl)
+// **************
+app.post('/todo/newTodo', todoCtrl.post)
+app.get('/todo/todoPosts/:author_id', todoCtrl.getPost)
+app.get('/user', authCtrl.getUser)
+app.delete('/todo/deleteTodo/:todo_id/:author_id', todoCtrl.deleteTodo )
+app.get('/todo/todoByDate/:author_id/:date', todoCtrl.todosByDate)
+    
+
 
 
 
