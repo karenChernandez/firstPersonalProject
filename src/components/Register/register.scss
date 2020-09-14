@@ -13,7 +13,7 @@ $color: #0cf;
     }
     h1{
   color: $color;
-  // font-size: 30px;
+  font-size: 18px;
   // font-size: 35px;
   position: relative;
   line-height: 0.2;
@@ -43,23 +43,7 @@ $color: #0cf;
   background: rgba(250, 250, 250, 0.3);
     }
 }
-@media all and(min-width:360px){
-.backgroundImg{
-  height:100vh;
-  width: 100vw;
-}
-.register-title{
-  font-size: 20px;
-}
-h1{
-  font-size: 20px;
-}
-// .registerButton{
-//   font-size: .8rem;
-//   width: 12px;
-//   height: 15px;
-// }
-}
+
 
 
 .registerBox{
@@ -129,4 +113,21 @@ h1{
     color:$color;
     line-height: 3cm;
     font-family: 'Kalam', cursive;
+}
+@media all and(min-width:360px){
+.backgroundImg{
+  height:100vh;
+  width: 100vw;
+}
+.register-title{
+  font-size: 20px;
+}
+h1{
+  font-size: 20px;
+}
+// .registerButton{
+//   font-size: .8rem;
+//   width: 12px;
+//   height: 15px;
+// }
 }
