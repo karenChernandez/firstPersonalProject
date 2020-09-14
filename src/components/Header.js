@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -9,7 +9,9 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
- import {withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { logOut} from '../redux/userAisle';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,29 +27,36 @@ const useStyles = makeStyles((theme) => ({
 
 function Header(props) {
     const {history}= props;
+    console.log(props)
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
+    // const theme = useTheme
+    // const isMobile =useMe
 
   
 
-    // const handleClose = () => {
-    //     setAnchorEl(event.currentTarget);
-    // };
+    const handleMenu = event => {
+        setAnchorEl(event.currentTarget);
+    };
 
     const handleMenuClick= (pageURL) => {
         history.push(pageURL);
         setAnchorEl(null);
     };
+    const handleLogOut=()=>{
+        props.logOut()
+         localStorage.clear('token');
+         props.history.push('/LogOut');
+        setAnchorEl(null);
+    }
 
     return (
         <div className={classes.root}>
             
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                        <MenuIcon />
-                    </IconButton>
+                   
                     <Typography variant="h6" className={classes.title}>
                         Home
           </Typography>
@@ -62,6 +71,18 @@ function Header(props) {
                             >
                                 <AccountCircle />
                             </IconButton> */}
+                        <IconButton 
+                            edge="start"
+                            className={classes.menuButton}
+                            color="inherit"
+                             aria-label="menu"
+                            onClick={handleMenu}>
+                                
+                            <MenuIcon />
+                            {props.userAisle.user.profile_pic ?(
+                            <img class='profilePic-header' src={props.userAisle.user.profile_pic} />
+                            ) : null}
+                            </IconButton>
                             <Menu
                                 id="menu-appbar"
                                 anchorEl={anchorEl}
@@ -75,10 +96,25 @@ function Header(props) {
                                     horizontal: 'right',
                                 }}
                                 open={open}
-                                onClose={()=>handleMenuClick(null)}
+                            onClose={() => setAnchorEl(null)}
                             >
-                                <MenuItem onClick={()=>handleMenuClick('/')}>Login</MenuItem>
-                                <MenuItem onClick={() =>handleMenuClick('/Register')}>Register</MenuItem>
+                            {props.userAisle.user.user_id ? (
+                                <div>
+
+                                    {/* <MenuItem onClick={()=>handleMenuClick('/')}>Login</MenuItem>
+                                    <MenuItem onClick={() =>handleMenuClick('/Register')}>Register</MenuItem> */}
+                                    <MenuItem onClick={() => handleMenuClick('/Profile')}>Profile</MenuItem>
+                                    <MenuItem onClick={() => handleMenuClick('/Calendar')}>Calendar</MenuItem>
+                                    <MenuItem onClick={() => handleMenuClick('/TodoList')}>Todo List</MenuItem>
+                                    <MenuItem onClick={() => handleLogOut()}>LogOut</MenuItem>
+                                </div>
+
+                            ) : <div>
+
+                                <MenuItem onClick={() => handleMenuClick('/')}>Login</MenuItem>
+                                <MenuItem onClick={() => handleMenuClick('/Register')}>Register</MenuItem> 
+                            </div>}
+
                             </Menu>
                         </div>
                     
@@ -87,4 +123,6 @@ function Header(props) {
         </div>
     );
 }
-export default withRouter(Header);
+// export default withRouter(Header);
+const mapStateToProps = state => state;
+export default withRouter(connect(mapStateToProps, { logOut})(Header));

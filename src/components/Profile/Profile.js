@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {goalPost} from './../../redux/userAisle';
 import {getTodos} from '../../redux/todoAisle';
-// import { Link } from 'react-router-dom';
+import './profile.css';
 
 
 
@@ -46,8 +46,10 @@ class Profile extends Component{
         console.log('What is Profile STATE?', this.state)
         console.log('Profile PROPS??', this.props)
 
-    return (<div>
-        <div>
+        return (<div className='profile'>
+            <div class="profileBackground">
+            <div class="textBox">
+        <div className='profileBox'>
             <h1>Hello {this.props.userAisle.user.name} !</h1>
             {/* <img src={this.props.userAisle.user.profile_pic}/> */}
         </div>
@@ -55,9 +57,10 @@ class Profile extends Component{
             <Link to='/Menu'>Menu</Link>
             <Link to='/'>Logout</Link>
         </nav> */}
-        <div>
-            <h1>What do you want to accomplish in this Bootcamp?(Main Goal)</h1>
-            <input onChange={(event) => this.changeInput(event)} value={mainGoal} name='mainGoal'></input>
+        <section className='profileBox2'>
+            <div >
+            <h1>What do you want to accomplish in this Bootcamp? <br/>(Main Goal)</h1>
+            <input type='text' onChange={(event) => this.changeInput(event)} value={mainGoal} name='mainGoal'></input>
             {/* <Link to='/Profile'>
                 <button>Submit</button>
             </Link>
@@ -82,12 +85,15 @@ class Profile extends Component{
 
         <div>
             <h1>Action Plan:</h1>
-            <input onChange={(event) => this.changeInput(event)} value={actionPlan} name='actionPlan'></input>
+            <textarea placeholder='What is your action plan?' onChange={(event) => this.changeInput(event)} value={actionPlan} name='actionPlan'></textarea>
         </div>
         <div>
             
             <button onClick={() => this.props.goalPost(this.props.userAisle.user.user_id, mainGoal, goal1, goal2, goal3, actionPlan, this.props.history)}>Submit</button>
-            <button onClick={(event) => this.handleEdit(event)}>Edit</button>
+            {/* <button onClick={(event) => this.handleEdit(event)}>Edit</button> */}
+        </div>
+        </section>
+        </div>
         </div>
     </div>)
 }

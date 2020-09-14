@@ -1,0 +1,124 @@
+.login {
+  width: 100%;
+}
+
+.login input {
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.login button {
+  margin-top: 20px;
+  display: inline-block;
+  padding: .75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.login button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0cf;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.login button:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #008fb3;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.login button:hover {
+  color: #fff;
+}
+
+.login button:hover:before {
+  width: 100%;
+}
+
+.login .loginPage {
+  background-image: url("https://www.assignmentexpert.com/blog/wp-content/uploads/2019/10/hardest-programming-language.png");
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.login .loginPage:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(250, 250, 250, 0.3);
+}
+
+.login .loginBox {
+  /* font-size: 15px; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(250, 250, 250, 0.9);
+  width: 50%;
+  height: 50%;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5%;
+}
+
+.text1 {
+  color: #0cf;
+  font-size: 18px;
+  position: relative;
+  line-height: 0.3;
+  font-family: 'Dosis', sans-serif;
+  /* font-family: 'Caveat', cursive; */
+}
+/*# sourceMappingURL=login.css.map */

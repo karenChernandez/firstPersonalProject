@@ -31,7 +31,7 @@ module.exports={
         console.log('req.params todoByDate', req.params)
         const {author_id, date} = req.params
         db.getAll_todosByDate([author_id, date]).then(post=>{
-            
+            console.log('POST? todo', post)
             return res.status(200).send(post)
         })
         

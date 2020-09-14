@@ -1,0 +1,101 @@
+$color: #0cf;
+.login{
+  width: 100%;
+  input {
+  border: none;
+  border-bottom: 2px solid black;
+}
+button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &:after {
+        content: '';
+        // font-family: 'Dosis', sans-serif;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color;
+        border-radius: 10rem;
+        z-index: -2;
+    }
+    &:before {
+        content: '';
+        // font-family: 'Dosis', sans-serif;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($color, 15%);
+        transition: all .3s;
+        border-radius: 10rem;
+        z-index: -1;
+    }
+    &:hover {
+        color: #fff;
+        &:before {
+            width: 100%;
+        }
+    }
+  }
+
+.loginPage{
+  background-image: url("https://www.assignmentexpert.com/blog/wp-content/uploads/2019/10/hardest-programming-language.png");
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  align-content: center;
+}
+.loginPage:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(250, 250, 250, 0.3);
+}
+.loginBox{
+  /* font-size: 15px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(250, 250, 250, 0.9);
+  width: 50%;
+  height: 50%;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5%;
+  
+}
+}
+.text1{
+  color: $color;
+  font-size: 18px;
+  position: relative;
+  line-height: 0.3;
+  font-family: 'Dosis', sans-serif;
+//   font-family: 'Playfair Display', serif;
+  /* font-family: 'Caveat', cursive; */
+}
+  

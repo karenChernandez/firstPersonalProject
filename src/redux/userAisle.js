@@ -16,7 +16,7 @@ const GET_USER= 'GET_USER';
 const GOAL_POST = 'GOAL_POST';
 
 //*****
-const TODO_POST = 'TODO_POST';
+// const TODO_POST = 'TODO_POST';
 
 
 
@@ -63,11 +63,13 @@ export function loginUser(username, password, history){
 
 
 export function logOut(history){
-    // history.push('/')
+    
     
     return{
         type: LOGOUT_USER,
         payload: initialState
+        // localStorage.clear('token');
+        // this.props.history.push('/LogOut');
         
     }
 }
@@ -122,8 +124,8 @@ export default function(state=initialState, action){
             return {...state, user: action.payload}
         case `${LOGIN_USER}_FULFILLED`:
             return {...state, user: action.payload}
-        case `${LOGOUT_USER}_FULFILLED`:
-            return {...state, ...action.payload}   
+        case 'LOGOUT_USER':
+            return initialState   
         case `${GOAL_POST}_FULFILLED`:
             return {...state, user: action.payload}
         case `${GET_USER}_FULFILLED`:

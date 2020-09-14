@@ -1,0 +1,80 @@
+.wrap {
+  width: 100%;
+}
+
+.homePage {
+  background-image: url("https://www.assignmentexpert.com/blog/wp-content/uploads/2019/10/hardest-programming-language.png");
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homePage:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(250, 250, 250, 0.3);
+}
+
+.homePage-title {
+  color: #0cf;
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Kalam', cursive;
+  font-size: 2.5rem;
+  line-height: 0.9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 150px;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* color: black; */
+  background: rgba(250, 250, 250, 0.9);
+  width: 90%;
+  height: 40%;
+  margin-top: 10%;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  /* padding-top: 10px; */
+  border-radius: 5%;
+}
+/*# sourceMappingURL=homePage.css.map */

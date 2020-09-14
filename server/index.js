@@ -31,7 +31,7 @@ massive({
     console.log('CONNECTED TO DB!!')
 }).catch(err => console.log(err))
 
-
+app.use(express.static(`${__dirname}/../build`));
 
 //server lisenters 
 
@@ -45,6 +45,13 @@ app.get('/todo/todoPosts/:author_id', todoCtrl.getPost)
 app.get('/user', authCtrl.getUser)
 app.delete('/todo/deleteTodo/:todo_id/:author_id', todoCtrl.deleteTodo )
 app.get('/todo/todoByDate/:author_id/:date', todoCtrl.todosByDate)
+
+
+
+const path = require('path')
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html'));
+})
     
 
 

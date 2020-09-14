@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {registerUser} from './../../redux/userAisle';
 import { Link } from 'react-router-dom';
+import './register.css';
 
 
 
@@ -28,21 +29,26 @@ render(){
     console.log('PROPS in Register', this.props)
     console.log('what is state?', this.state)
  const {username, name, password, profile_pic}=this.state
-    return (<div>
-        <h1>This is the Register Component</h1>
-        <form onSubmit={(e)=>e.preventDefault()}>
+    return (<div className=' register'>
+        <div class="backgroundImg">
+            <div class="center registerBox">
+        <h1 className='register-title'>CREATE AN ACCOUNT</h1>
+        <form  onSubmit={(e)=>e.preventDefault()}>
             <h1>Username:</h1>
             <input onChange={(e)=>this.handleInput(e)} name='username' value={username}/>
-            <h1>Name</h1>
+            <h1>Name:</h1>
             <input onChange={(e) => this.handleInput(e)} name='name' value={name}/>
             <h1>Password:</h1>
-            <input onChange={(e) => this.handleInput(e)} name='password' value={password}/>
+            <input type='password' onChange={(e) => this.handleInput(e)} name='password' value={password}/>
             <h1>Picture:</h1>
             <input onChange={(e) => this.handleInput(e)} name='profile_pic' value={profile_pic}/>
-            <button onClick={() => this.props.registerUser(username, name, password, profile_pic, this.props.history)}>Submit</button>
-            <Link to='/'><button>LogIn</button></Link>
+            <br/>
+            <button className='registerButton' onClick={() => this.props.registerUser(username, name, password, profile_pic, this.props.history)}>Submit</button>
+            {/* <Link to='/'><button>LogIn</button></Link> */}
        
         </form>
+            </div>
+        </div>
         
     </div>)
     

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Menu from './components/Menu/Menu';
+// import Menu from './components/Menu/Menu';
 import Header from './components/Header';
 import './App.css';
 import routers from './routes';
