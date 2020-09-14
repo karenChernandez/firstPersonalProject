@@ -77,4 +77,10 @@
   /* padding-top: 10px; */
   border-radius: 5%;
 }
+
+@media (min-width: 360px) {
+  .register-title, h1 {
+    font-size: 70px;
+  }
+}
 /*# sourceMappingURL=homePage.css.map */
