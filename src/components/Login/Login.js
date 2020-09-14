@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {loginUser} from './../../redux/userAisle';
 import {connect} from 'react-redux';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './login.css';
 
 
@@ -35,7 +35,7 @@ handleChange(event){
         <div >
         <button className='btn' onClick={() => this.props.loginUser(username, password, this.props.history)} >Login</button>
             <Link to='/Register'>
-            <button>Register</button>
+            Register
             </Link>
         </div>        
             </div>

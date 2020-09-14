@@ -44,7 +44,7 @@ render(){
             <input onChange={(e) => this.handleInput(e)} name='profile_pic' value={profile_pic}/>
             <br/>
             <button className='registerButton' onClick={() => this.props.registerUser(username, name, password, profile_pic, this.props.history)}>Submit</button>
-            {/* <Link to='/'><button>LogIn</button></Link> */}
+            <Link to='/'>LogIn</Link>
        
         </form>
             </div>
