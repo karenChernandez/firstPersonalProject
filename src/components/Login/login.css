@@ -117,7 +117,7 @@
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 5%;
-  width: 60%;
+  width: 55%;
   height: 30%;
 }
 
@@ -146,6 +146,9 @@
     height: 40px;
     font-size: 15px;
     padding: 0.75rem 1.25rem;
+  }
+  .login h1 {
+    font-size: 28px;
   }
 }
 /*# sourceMappingURL=login.css.map */
