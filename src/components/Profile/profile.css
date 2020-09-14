@@ -132,7 +132,7 @@
   height: 90%;
   width: 90%;
   display: flex;
-  margin: 20px;
+  margin: 20px auto auto auto;
   border-radius: 5%;
 }
 
@@ -151,11 +151,12 @@ textarea {
 }
 
 @media all and (min-width: 360px) {
-  profileBackground {
+  .profileBackground {
     height: 100vh;
   }
   .profileBox2 {
-    width: 120%;
+    width: 97%;
+    margin: 20px auto auto auto;
   }
   .textBox {
     width: 90%;
