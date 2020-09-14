@@ -67,8 +67,8 @@ class Profile extends Component{
             <Link to='/Goal'><button>Edit</button></Link> */}
         </div>
 
-        <h1>What are your 3 micro-goals?</h1>
         <div>
+        <h1>What are your 3 micro-goals?</h1>
             <li>
                 <input placeholder='Micro Goal #1' onChange={(event)=>this.changeInput(event)} value={goal1} name='goal1'/>
             </li>

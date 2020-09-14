@@ -19,7 +19,7 @@
 }
 
 .profile button {
-  margin-top: 80px;
+  margin-top: 15px;
   display: inline-block;
   padding: .75rem 1.25rem;
   border-radius: 10rem;
@@ -113,7 +113,6 @@
   height: 20%;
   margin: 25px auto auto auto;
   border-radius: 5%;
-  width: 90vw;
 }
 
 .profileBox2 {
@@ -129,15 +128,13 @@
       -ms-flex-pack: center;
           justify-content: center;
   background: rgba(250, 250, 250, 0.9);
-  width: 100%;
-  height: 90%;
-  margin-top: 20px auto auto auto;
+  height: 100%;
   border-radius: 5%;
 }
 
 textarea {
+  margin-top: 20px auto auto auto;
   width: 100%;
-  height: 100%;
   padding: 12px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
