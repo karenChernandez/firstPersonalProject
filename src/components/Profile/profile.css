@@ -129,12 +129,14 @@
           justify-content: center;
   background: rgba(250, 250, 250, 0.9);
   height: 100%;
+  width: 90%;
+  display: flex;
+  margin: 20px;
   border-radius: 5%;
 }
 
 textarea {
   margin-top: 20px auto auto auto;
-  width: 100%;
   padding: 12px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
