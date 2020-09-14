@@ -6,7 +6,9 @@ $color: #0cf;
   border: none;
   border-bottom: 2px solid black;
 }
-
+.login-buttons{
+  width: 20px;
+}
 button {
     margin-top: 20px;
     display: inline-block;
@@ -87,7 +89,7 @@ button {
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 5%;
-  width: 50%;
+  width: 60%;
     height: 30%;
   
 }
@@ -105,7 +107,7 @@ button {
 @media all and(min-width:360px){
   .login .loginBox{
     margin-top: 166px;
-    width: 40%;
+    width: 45%;
     height: 35%;
 
   }
@@ -115,9 +117,10 @@ button {
   .register-title, h1 {
     font-size: 25px;
 }
-.login button{
+
+.login-button{
   font-size: 15px;
-  height: 40px;
+  height: 35px;
   padding: 0.75rem 1.25rem;
 
 } 
