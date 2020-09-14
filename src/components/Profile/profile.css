@@ -151,6 +151,9 @@ textarea {
 }
 
 @media all and (min-width: 360px) {
+  h1 {
+    font-size: 30px;
+  }
   .profileBackground {
     height: 100vh;
   }
