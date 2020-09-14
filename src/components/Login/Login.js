@@ -34,9 +34,9 @@ handleChange(event){
         <input  type= 'password' onChange={(event) => this.handleChange(event)} value={password} name='password'/>
         <div >
         <button className='btn' onClick={() => this.props.loginUser(username, password, this.props.history)} >Login</button>
-            {/* <Link to='/Register'>
+            <Link to='/Register'>
             <button>Register</button>
-            </Link> */}
+            </Link>
         </div>        
             </div>
         </div>
