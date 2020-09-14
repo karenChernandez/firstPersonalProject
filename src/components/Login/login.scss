@@ -10,17 +10,19 @@ $color: #0cf;
 button {
     margin-top: 20px;
     display: inline-block;
-    padding: .75rem 1.25rem;
+    // padding: .75rem 1.25rem;
     border-radius: 10rem;
     color: #fff;
     font-family: 'Dosis', sans-serif;
     text-transform: uppercase;
-    font-size: 1rem;
+    // font-size: 1rem;
     letter-spacing: .15rem;
     transition: all .3s;
     position: relative;
     overflow: hidden;
     z-index: 1;
+    font-size: 12px;
+    height: 26px;
     margin-right: 5px;
     &:after {
         content: '';
@@ -102,5 +104,20 @@ button {
   font-family: 'Dosis', sans-serif;
 //   font-family: 'Playfair Display', serif;
   /* font-family: 'Caveat', cursive; */
+}
+
+@media all and(min-width:360px){
+  .login .loginBox{
+    margin-top: 166px;
+    width: 50%;
+
+  }
+  .text1{
+    font-size: 20px;
+  }
+  .register-title, h1 {
+    font-size: 25px;
+}
+
 }
   
