@@ -11,8 +11,8 @@ function HomePage (){
     
         <div className=' homePage'>
 
-            <div className='center box homePage-title'>
-            <h1>My Bootcamp Journal</h1>
+            <div className='center box'>
+                <h1 className='homePage-title'>My Bootcamp Journal</h1>
             </div>
 
         </div>
