@@ -1,5 +1,5 @@
 .profile {
-  width: 100%;
+  min-height: 100vh;
 }
 
 .profile input {
@@ -83,7 +83,7 @@
 .profileBackground {
   background-image: url("https://previews.123rf.com/images/annaleni/annaleni1612/annaleni161200114/67657611-line-programming-white-seamless-pattern-illustration-of-outline-tile-background-coding-resources-.jpg");
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,11 +164,11 @@ textarea {
   .register-title, h1 {
     font-size: 20px;
   }
-  .profileBackground {
-    height: 100vh;
-  }
   .profileBox h1 {
     font-size: 25px;
+  }
+  .profile input {
+    width: 400px;
   }
   .profileBox2 {
     width: 85%;
@@ -178,7 +178,7 @@ textarea {
     font-size: 30px;
   }
   .textBox {
-    width: 90%;
+    width: 100%;
   }
   textarea {
     height: 160%;
