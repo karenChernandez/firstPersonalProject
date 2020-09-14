@@ -34,7 +34,6 @@
   text-align: center;
   margin-top: 50px;
   font-family: 'Kalam', cursive;
-  font-size: 45px;
   line-height: 0.9;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,6 +51,10 @@
       -ms-flex-align: center;
           align-items: center;
   margin-top: 150px;
+}
+
+h1 {
+  font-size: 45px;
 }
 
 .box {
