@@ -17,6 +17,11 @@ $color: #0cf;
   font-family: 'Dosis', sans-serif;
   text-align: center;
   }
+  .actionPla-Button{
+    display: flex;
+    flex-direction: column;
+    
+  }
 button {
     margin-top: 20%;
     display: inline-block;

@@ -82,6 +82,7 @@ class Profile extends Component{
             </li>
 
         </div>
+            <div className='actionPla-Button'>
 
         <div>
             <h1>Action Plan:</h1>
@@ -92,6 +93,7 @@ class Profile extends Component{
             <button onClick={() => this.props.goalPost(this.props.userAisle.user.user_id, mainGoal, goal1, goal2, goal3, actionPlan, this.props.history)}>Submit</button>
             {/* <button onClick={(event) => this.handleEdit(event)}>Edit</button> */}
         </div>
+            </div>
         </section>
         </div>
         </div>
