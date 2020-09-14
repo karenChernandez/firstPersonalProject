@@ -22,7 +22,7 @@ button {
     overflow: hidden;
     z-index: 1;
     font-size: 12px;
-    height: 26px;
+    height: 25px;
     margin-right: 5px;
     &:after {
         content: '';
@@ -105,7 +105,8 @@ button {
 @media all and(min-width:360px){
   .login .loginBox{
     margin-top: 166px;
-    width: 50%;
+    width: 40%;
+    height: 35%;
 
   }
   .text1{
@@ -121,7 +122,7 @@ button {
 
 } 
 h1{
-  font-size: 18px;
+  font-size: 20px;
 }   
 
 }

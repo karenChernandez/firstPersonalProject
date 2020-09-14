@@ -22,7 +22,7 @@
   overflow: hidden;
   z-index: 1;
   font-size: 12px;
-  height: 26px;
+  height: 25px;
   margin-right: 5px;
 }
 
@@ -125,7 +125,8 @@
 @media all and (min-width: 360px) {
   .login .loginBox {
     margin-top: 166px;
-    width: 50%;
+    width: 40%;
+    height: 35%;
   }
   .text1 {
     font-size: 20px;
@@ -139,7 +140,7 @@
     padding: 0.75rem 1.25rem;
   }
   h1 {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=login.css.map */
