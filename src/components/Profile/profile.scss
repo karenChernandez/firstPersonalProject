@@ -125,3 +125,15 @@ textarea {
   font-size: 15px;
   resize: none;
 }
+
+@media all and(min-width:360px){
+  profileBackground {
+    height: 100vh;
+  }
+  .profileBox2 {
+  width: 120%;
+  }
+  .textBox{
+    width: 90%;
+  }
+}
