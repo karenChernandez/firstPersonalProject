@@ -11,6 +11,10 @@
   width: 170px;
 }
 
+.login h1 {
+  font-size: 20px;
+}
+
 .login button {
   margin-top: 20px;
   display: inline-block;
