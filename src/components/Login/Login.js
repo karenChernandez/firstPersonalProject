@@ -32,7 +32,7 @@ handleChange(event){
         <input onChange={(event) => this.handleChange(event)} value={username} name='username'/>
         <h1>Password:</h1>
         <input  type= 'password' onChange={(event) => this.handleChange(event)} value={password} name='password'/>
-        <div >
+        <div className='login-buttons' >
         <button className='btn' onClick={() => this.props.loginUser(username, password, this.props.history)} >Login</button>
             <Link to='/Register'>
             Register
