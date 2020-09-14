@@ -128,12 +128,13 @@ textarea {
 
 @media all and(min-width:360px){
   .register-title,h1{
-    font-size: 30px;
+    font-size: 20px;
   }
   .profileBackground {
     height: 100vh;
   }
-  .profileBox2 {
+  .profileBox2, h1 {
+    font-size: 20px;
   width: 97%;
   margin: 20px auto auto auto;
   }
