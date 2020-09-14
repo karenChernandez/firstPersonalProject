@@ -20,7 +20,7 @@ $color: #0cf;
   .actionPla-Button{
     display: flex;
     flex-direction: column;
-    
+
   }
 button {
     margin-top: 20%;
@@ -74,10 +74,11 @@ button {
 .profileBackground{
   background-image: url("https://previews.123rf.com/images/annaleni/annaleni1612/annaleni161200114/67657611-line-programming-white-seamless-pattern-illustration-of-outline-tile-background-coding-resources-.jpg");
   position: relative;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
 
    &:before{
   content: '';

@@ -18,11 +18,11 @@ class Profile extends Component{
             actionPlan: this.props.userAisle.user.action_plan || ''
         }
     }
-    // componentDidMount(){
-    // if (this.props.userAisle.user.user_id) {
-    //     this.props.goalPost(this.props.userAisle.user.user_id)
-    // }
-    // }
+    componentDidMount(){
+    if (this.props.userAisle.user.user_id) {
+        this.props.goalPost(this.props.userAisle.user.user_id)
+    }
+    }
     // componentDidUpdate(previousProps) {
     //     console.log('PROPS.DATA', previousProps.userAisle.user.user_id, this.props.userAisle.user.user_id)
     //     //  Race Condition between Menu CDM & this component's CDM

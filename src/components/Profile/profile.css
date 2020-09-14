@@ -83,7 +83,7 @@
 .profileBackground {
   background-image: url("https://previews.123rf.com/images/annaleni/annaleni1612/annaleni161200114/67657611-line-programming-white-seamless-pattern-illustration-of-outline-tile-background-coding-resources-.jpg");
   position: relative;
-  height: 800px;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
