@@ -34,7 +34,7 @@
   text-align: center;
   margin-top: 50px;
   font-family: 'Kalam', cursive;
-  font-size: 54px;
+  font-size: 45px;
   line-height: 0.9;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -80,7 +80,7 @@
 
 @media (min-width: 360px) {
   .register-title, h1 {
-    font-size: 70px;
+    font-size: 75px;
   }
   .box {
     margin-top: 17%;
