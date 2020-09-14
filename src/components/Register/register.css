@@ -130,12 +130,13 @@
   width: 100%;
 }
 
-.register-title {
+.register-title h1 {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #0cf;
   line-height: 3cm;
   font-family: 'Kalam', cursive;
+  font-size: 20px;
 }
 
 @media all and (min-width: 360px) {
@@ -149,10 +150,10 @@
     background-size: cover;
   }
   .register h1 {
-    font-size: 20px;
+    font-size: 30px;
   }
   .register-title h1 {
-    font-size: 15px;
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=register.css.map */

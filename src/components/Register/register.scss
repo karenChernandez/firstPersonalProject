@@ -111,11 +111,12 @@ $color: #0cf;
         }
     }
 }
-.register-title{
+.register-title h1{
     text-decoration-line: underline;
     color:$color;
     line-height: 3cm;
     font-family: 'Kalam', cursive;
+    font-size: 20px;
 }
 @media all and(min-width:360px){
 .backgroundImg{
@@ -130,11 +131,11 @@ $color: #0cf;
   background-size: cover; 
 }
 .register h1{
-  font-size: 20px;
+  font-size: 30px;
   
 }
 .register-title h1{
-  font-size: 15px;
+  font-size: 25px;
 }
 //
 // .registerButton{
