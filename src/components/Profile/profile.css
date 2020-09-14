@@ -157,6 +157,9 @@ textarea {
   .profileBackground {
     height: 100vh;
   }
+  .profileBox, h1 {
+    font-size: 18px;
+  }
   .profileBox2, h1 {
     font-size: 20px;
     width: 97%;
