@@ -21,7 +21,6 @@
 .profile button {
   margin-top: 20%;
   display: inline-block;
-  padding: .75rem 1.25rem;
   border-radius: 10rem;
   color: #fff;
   font-family: 'Dosis', sans-serif;
@@ -33,6 +32,8 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+  font-size: 12px;
+  height: 25px;
 }
 
 .profile button:after {
