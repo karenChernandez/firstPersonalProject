@@ -117,7 +117,7 @@
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 5%;
-  width: 55%;
+  width: 60%;
   height: 30%;
 }
 
@@ -138,9 +138,6 @@
   }
   .text1 {
     font-size: 18px;
-  }
-  .register-title, h1 {
-    font-size: 37px;
   }
   .login button {
     height: 40px;
