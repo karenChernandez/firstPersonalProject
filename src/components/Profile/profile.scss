@@ -127,7 +127,7 @@ textarea {
 }
 
 @media all and(min-width:360px){
-  .register-title, h1{
+  .register-title,h1{
     font-size: 30px;
   }
   .profileBackground {
@@ -139,5 +139,8 @@ textarea {
   }
   .textBox{
     width: 90%;
+  }
+  .textarea{
+    height: 160%;
   }
 }

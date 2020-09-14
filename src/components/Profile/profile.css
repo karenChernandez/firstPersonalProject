@@ -164,5 +164,8 @@ textarea {
   .textBox {
     width: 90%;
   }
+  .textarea {
+    height: 160%;
+  }
 }
 /*# sourceMappingURL=profile.css.map */
