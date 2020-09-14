@@ -111,35 +111,7 @@ $color: #0cf;
     width: 90%;
     margin-bottom: 10px;
 }
-// .calendar{
-//     width: 50%;
-//     height: 60px;
-// }
 
-// @media all and(min-width:380px){
-//   .left-box{
-//     align-items: center;
-//     justify-items: center;
-//     height: 50%;
-//     width: 90%;
-//   }
-  
-
-//   .calendar{
-
-//     h1{
-//       text-align: center;
-//      font-size: 30px;
-//      margin-left: 20px;
-//    }
-//     h2{
-//      font-size: 25px;
-//    }
-//   }
-//   p{
-//     font-size: 20px;
-//   }
-// }
 @media all and(min-width:768px){
   .calendar-todo{
       flex-direction: row;
@@ -149,6 +121,9 @@ $color: #0cf;
       width: 90%;
       margin:25px auto auto auto;
      
+  }
+  .calendarImg{
+    height: 100vh;
   }
   .calendar h1{
     font-size: 50px;

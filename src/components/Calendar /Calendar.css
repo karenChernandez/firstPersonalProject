@@ -153,6 +153,9 @@
     width: 90%;
     margin: 25px auto auto auto;
   }
+  .calendarImg {
+    height: 100vh;
+  }
   .calendar h1 {
     font-size: 50px;
     text-align: center;
