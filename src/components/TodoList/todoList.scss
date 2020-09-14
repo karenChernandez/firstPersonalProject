@@ -46,7 +46,7 @@ $color: #0cf;
   // width: 50%;
   // height: 25%;
    width: 90vw;
-  height: 25%;
+  // height: 20%;
   margin: 25px auto auto auto;
   // height: 30%;
   // height: 28%;
@@ -81,16 +81,13 @@ $color: #0cf;
   justify-items: center;
   align-items: center;
   justify-content: space-around;
+  flex-direction: column;
+  margin: 25px auto auto auto;
+  width: 60%;
 }
 .checkBox-todo{
 display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: stretch;
-    margin: 25px auto auto auto;
-    width: 60%;
+
 
 
 

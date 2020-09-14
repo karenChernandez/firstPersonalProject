@@ -104,14 +104,14 @@
       -ms-flex-pack: center;
           justify-content: center;
   background: rgba(250, 250, 250, 0.9);
-  width: 50%;
-  height: 50%;
   margin-top: 50px;
   margin-left: 20px;
   margin-right: 20px;
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 5%;
+  width: 60%;
+  height: 40%;
 }
 
 .text1 {
